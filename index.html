@@ -14,6 +14,13 @@
 		href="https://spreadsheets.google.com/feeds/list/1qiQAXt-npIdQ_uVXH5YHgQ1EKzhdIiD4KXD39WBK59g/1/public/basic?alt=json-in-script"
 		ex:separator="//SEP//"
 		ex:converter="googleSpreadsheets" />
+
+	<link rel="exhibit/data" 
+		type="application/jsonp"
+		href="https://spreadsheets.google.com/feeds/list/1qiQAXt-npIdQ_uVXH5YHgQ1EKzhdIiD4KXD39WBK59g/2/public/basic?alt=json-in-script"
+		ex:separator="//SEP//"
+		ex:converter="googleSpreadsheets" />
+
 	<script>
 	Exhibit_urlPrefix="lib/exhibit/api-2.1.0/";
 	Exhibit_parameters='bundle=true';
@@ -42,6 +49,7 @@
 	<script>hljs.initHighlightingOnLoad();</script>
 
 	<div ex:role="collection" id="algorithms" ex:itemTypes="Algorithm"></div>
+	<div ex:role="collection" id="structures" ex:itemTypes="Structure"></div>
 
     <h1>Algorithms</h1>
 
@@ -51,11 +59,18 @@
 
 				<div ex:role="lens" ex:itemTypes="Algorithm" class="algorithm" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
 					<span ex:content=".label" class="label"></span>
-					<pre ex:content=".explanation" class="name"></pre>
+					<pre ex:content=".explanation" class="explanation"></pre>
 					<pre ex:if-exists=".implementation"><code class="java" ex:content=".implementation"></code></pre>
 				</div>
 
-                <div ex:role="view" ex:label="Algorithms" ex:orders=".start" ex:directions="descending" ex:grouped="false" ex:collectionID="algorithms"></div>
+				<div ex:role="lens" ex:itemTypes="Structure" class="structure" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
+					<span ex:content=".label" class="label"></span>
+					<pre ex:content=".explanation" class="explanation"></pre>
+					<pre ex:if-exists=".implementation"><code class="java" ex:content=".implementation"></code></pre>
+				</div>
+
+				<div ex:role="view" ex:label="Algorithms" ex:orders=".label" ex:directions="ascending" ex:grouped="false" ex:collectionID="algorithms"></div>
+				<div ex:role="view" ex:label="Structures" ex:orders=".label" ex:directions="ascending" ex:grouped="false" ex:collectionID="structures"></div>
 
             </td>
             <td width="20%">
