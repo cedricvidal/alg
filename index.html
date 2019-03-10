@@ -27,15 +27,19 @@
 	<script src="lib/exhibit/extensions-2.1.0/time/time-extension.js" type="text/javascript"></script>
 	<script src="lib/exhibit/extensions-2.1.0/map/map-extension.js?gmapkey=ABQIAAAA3N9-7oj7-G89bYFMzamBkRTQRsezl3d7ON-ukbGIyTMDcN93rhRYNlA4IoqHExasEglm13nOHiMAEg"></script>
 
- </head> 
+	<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+</head> 
  <body ex:ondataload="loadExhibit">
 
 	<script type="text/javascript"><!--
 		function loadExhibit() {
 	        window.exhibit = Exhibit.create();
-	        window.exhibit.configureFromDOM();
+			window.exhibit.configureFromDOM();
 		}
 --></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 	<div ex:role="collection" id="algorithms" ex:itemTypes="Algorithm"></div>
 
@@ -45,22 +49,11 @@
         <tr valign="top">
             <td ex:role="viewPanel">
 
-				<table ex:role="lens" ex:itemTypes="Algorithm" class="algorithm" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
-					<tr>
-						<td class="middle">
-							<div>
-								<table>
-									<tr>
-										<td class="label">Algorithm:</td>
-										<td><span ex:content=".label" class="name"></span></td>
-									</tr>
-								</table>
-								<p ex:content=".explanation" class="name"></p>
-								<pre ex:content=".implementation" class="name"></pre>
-							</div>
-						</td>
-					</tr>
-				</table>
+				<div ex:role="lens" ex:itemTypes="Algorithm" class="algorithm" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
+					<span ex:content=".label" class="label"></span>
+					<pre ex:content=".explanation" class="name"></pre>
+					<pre ex:if-exists=".implementation"><code class="java" ex:content=".implementation"></code></pre>
+				</div>
 
                 <div ex:role="view" ex:label="Algorithms" ex:orders=".start" ex:directions="descending" ex:grouped="false" ex:collectionID="algorithms"></div>
 
