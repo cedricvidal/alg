@@ -1,45 +1,15 @@
 {
-    types: {
-        "Experience" : {
-            pluralLabel: "Experiences"
+    "types": {
+        "Algorithm" : {
+            pluralLabel: "Algorithms"
         },
-        "Company" : {
-            pluralLabel: "Experiences"
+        "Structure" : {
+            pluralLabel: "Structures"
         },
-		"Skill" : {
-		    pluralLabel: "Skills"
-        },
-		"Talk" : {
-		    pluralLabel: "Talks"
-        },
-		"Publication" : {
-		    pluralLabel: "Publications"
-        },
-		"Education" : {
-		    pluralLabel: "Educations"
-        },
-		"Expertise" : {
-		    pluralLabel: "Expertises"
-		}
     },
-    properties: {
-        "customer" : {
+    "properties": {
+        "label" : {
             valueType: "item"
         },
-        "employer" : {
-            valueType: "item"
-        },
-	    "start" : {
-        	label: "Start",
-	        valueType: "date"
-        },
-	    "end" : {
-        	label: "End",
-	        valueType: "date"
-        },
-	    "date" : {
-        	label: "Date",
-	        valueType: "date"
-	    }
     }
 }

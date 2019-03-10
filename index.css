@@ -6,12 +6,23 @@ h2 {
 	text-align: center;
 }
 
+pre {
+	max-width: 900px;
+	white-space: pre-wrap;
+}
+
+pre.implementation {
+	background: #F5F4DD;
+	max-height: 400px;
+    overflow: auto;
+}
+
+.drawing {
+	height: 250px;
+}
+
 table.algorithm {
 	padding:    10px;
-}
-.algorithm .middle {
-	width:     100%;
-	text-align: justify;
 }
 .label {
 	font-weight: bold;
