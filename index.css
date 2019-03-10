@@ -1,0 +1,28 @@
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+table.algorithm {
+	padding:    10px;
+}
+.algorithm .middle {
+	width:     100%;
+	text-align: justify;
+}
+.algorithm .label {
+	font-weight: bold;
+}
+
+ol.exhibit-tileView-body {
+	list-style: none;
+}
+
+div.exhibit-cloudFacet-body {
+	overflow: auto;
+	height: 200px;
+	border: 1px solid #DDDDDD;
+}
