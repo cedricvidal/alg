@@ -12,6 +12,7 @@
 	<link rel="exhibit/data" 
 		type="application/jsonp"
 		href="https://spreadsheets.google.com/feeds/list/1qiQAXt-npIdQ_uVXH5YHgQ1EKzhdIiD4KXD39WBK59g/1/public/basic?alt=json-in-script"
+		ex:separator="//SEP//"
 		ex:converter="googleSpreadsheets" />
 	<script>
 	Exhibit_urlPrefix="lib/exhibit/api-2.1.0/";
@@ -48,20 +49,14 @@
 					<tr>
 						<td class="middle">
 							<div>
-								<span ex:content="if(exists(.customer.label), .customer.label, .customer)" class="customer"></span>
-								<span ex:if-exists=".place">
-									<span>(</span>
-									<span ex:content=".place" class="place"></span>
-									<span>)</span>
-								</span>
-							</div>
-							<div>
 								<table>
 									<tr>
-										<td class="label">Label</td>
+										<td class="label">Algorithm:</td>
 										<td><span ex:content=".label" class="name"></span></td>
 									</tr>
 								</table>
+								<p ex:content=".explanation" class="name"></p>
+								<pre ex:content=".implementation" class="name"></pre>
 							</div>
 						</td>
 					</tr>
