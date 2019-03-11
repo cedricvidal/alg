@@ -90,7 +90,8 @@
 				<div ex:role="lens" ex:itemTypes="Structure" class="structure" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
 					<span ex:content=".label" class="label"></span>
 					<pre ex:content=".explanation" class="explanation"></pre>
-					<pre ex:if-exists=".implementation"><code class="java" ex:content=".implementation"></code></pre>
+					<img ex:if-exists=".drawing" ex:src-subcontent="{{.drawing}}" class="drawing"></img>
+					<pre ex:if-exists=".implementation" class="implementation"><code class="java" ex:content=".implementation"></code></pre>
 				</div>
 
 				<div ex:role="view" ex:label="Algorithms" ex:orders=".order" ex:directions="ascending" ex:grouped="false" ex:collectionID="algorithms"></div>

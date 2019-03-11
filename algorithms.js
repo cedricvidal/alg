@@ -6,6 +6,12 @@
         "Structure" : {
             pluralLabel: "Structures"
         },
+        "Problem" : {
+            pluralLabel: "Problems"
+        },
+        "Concept" : {
+            pluralLabel: "Concepts"
+        },
     },
     "properties": {
         "label" : {
