@@ -50,6 +50,7 @@
 
 	<div ex:role="collection" id="algorithms" ex:itemTypes="Algorithm"></div>
 	<div ex:role="collection" id="structures" ex:itemTypes="Structure"></div>
+	<div ex:role="collection" id="problems" ex:itemTypes="Problem"></div>
 
     <h1>Algorithms</h1>
 
@@ -64,6 +65,13 @@
 					<pre ex:if-exists=".implementation" class="implementation"><code class="java" ex:content=".implementation"></code></pre>
 				</div>
 
+				<div ex:role="lens" ex:itemTypes="Problem" class="problem" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
+					<span ex:content=".label" class="label"></span>
+					<pre ex:content=".explanation" class="explanation"></pre>
+					<img ex:if-exists=".drawing" ex:src-subcontent="{{.drawing}}" class="drawing"></img>
+					<pre ex:if-exists=".implementation" class="implementation"><code class="java" ex:content=".implementation"></code></pre>
+				</div>
+	
 				<div ex:role="lens" ex:itemTypes="Structure" class="structure" ex:formats="date { template: 'MMM yyyy'; show: date }" style="display: none;">
 					<span ex:content=".label" class="label"></span>
 					<pre ex:content=".explanation" class="explanation"></pre>
@@ -71,6 +79,7 @@
 				</div>
 
 				<div ex:role="view" ex:label="Algorithms" ex:orders=".order" ex:directions="ascending" ex:grouped="false" ex:collectionID="algorithms"></div>
+				<div ex:role="view" ex:label="Problems" ex:orders=".order" ex:directions="ascending" ex:grouped="false" ex:collectionID="problems"></div>
 				<div ex:role="view" ex:label="Structures" ex:orders=".label" ex:directions="ascending" ex:grouped="false" ex:collectionID="structures"></div>
 
             </td>
